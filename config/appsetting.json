@@ -1,0 +1,47 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "INFO",
+      "Azure": "WARNING"
+    }
+  },
+  "local_io": {
+    "path_to_data": "data_path/"
+  },
+  "io_filename": {
+    "lsh_db": "lsh_modified.db",
+    "denomination_lsh_metadata": "denomination_hashtables_metadata.json",
+    "discarded_token": "discarded_token.parquet"
+  },
+  "sqlite_ediag_alias":  "ediag",
+  "model_parameters": {
+    "legal_entities": [ "SCI", "SARL", "EARL", "SAS", "SOC", "EURL", "GEIE", "SA", "SLP", "GAEC", "SCEA", "GFA", "LTD", "SCM", "SNC", "EI", "SASU", "SCS", "SCA" ],
+    "unite_legale_denominations": [
+      "denominationUniteLegale",
+      "sigleUniteLegale",
+      "denominationUsuelle1UniteLegale",
+      "denominationUsuelle2UniteLegale"
+    ],
+    "etablissement_denominations": [
+      "denominationUsuelleEtablissement",
+      "enseigne1Etablissement",
+      "enseigne2Etablissement"
+    ],
+    "minhash_num_permutations": 128,
+    "lsh_threshold": 0.5,
+    "jaccard_threshold": 0.5,
+    "nb_rank": 500,
+    "nb_final_candidates": 50
+  },
+  "API": {
+    "host": "0.0.0.0",
+    "port": 8000
+  },
+  "Azure": {
+    "AZURE_AUTHORIZED_CONTAINER_NAME": "",
+    "AZURE_STORAGE_ACCOUNT": "",
+    "AZURE_BLOB_STORAGE_ACCOUNT_URL": "",
+    "AZURE_CONTAINER_PATH": "",
+    "AZURE_CONNECTION_STRING": ""
+  }
+}

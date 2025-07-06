@@ -1,0 +1,39 @@
+{
+  "compauxlib_siren": {
+    "COMPAUXLIB": "VARCHAR",
+    "siren": "VARCHAR",
+    "siret": "VARCHAR",
+    "denominationUniteLegale": "VARCHAR",
+    "sigleUniteLegale": "VARCHAR",
+    "denominationUsuelle1UniteLegale": "VARCHAR",
+    "denominationUsuelle2UniteLegale": "VARCHAR",
+    "denominationUsuelle3UniteLegale": "VARCHAR",
+    "activitePrincipaleUniteLegale": "VARCHAR",
+    "denominationUsuelleEtablissement": "VARCHAR",
+    "enseigne1Etablissement": "VARCHAR",
+    "enseigne2Etablissement": "VARCHAR",
+    "enseigne3Etablissement": "VARCHAR",
+    "jaccard_distance": "REAL",
+    "geo_distance": "REAL",
+    "final_rank": "INTEGER",
+    "most_probable": "INTEGER"
+  },
+  "compauxlib_siren_debug": {
+    "COMPAUXLIB": "VARCHAR",
+    "siren": "VARCHAR",
+    "siret": "VARCHAR",
+    "shingled_COMPAUXLIB_unfiltered": "VARCHAR",
+    "shingled_COMPAUXLIB_filtered": "VARCHAR",
+    "shingled_denomination_unfiltered": "VARCHAR",
+    "shingled_denomination_filtered": "VARCHAR",
+    "jaccard_distance_filtered": "REAL",
+    "jaccard_distance_unfiltered": "REAL",
+    "AbscisseEtablissement": "REAL",
+    "OrdonneeEtablissement": "REAL",
+    "jaccard_validated": "INTEGER",
+    "validated":  "INTEGER",
+    "geo_distance": "REAL",
+    "final_rank": "INTEGER",
+    "most_probable": "INTEGER"
+  }
+}

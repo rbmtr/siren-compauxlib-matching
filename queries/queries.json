@@ -1,0 +1,16 @@
+{
+  "get_siren_table": "SELECT siren, siret, denominationUniteLegale, sigleUniteLegale, denominationUsuelle1UniteLegale, denominationUsuelle2UniteLegale, denominationUsuelle3UniteLegale, denominationUsuelleEtablissement, enseigne1Etablissement, enseigne2Etablissement, enseigne3Etablissement FROM '{input_table}'",
+  "get_siren_table_prediction": "SELECT siren, siret, denominationUniteLegale, sigleUniteLegale, denominationUsuelle1UniteLegale, denominationUsuelle2UniteLegale, denominationUsuelle3UniteLegale, denominationUsuelleEtablissement, enseigne1Etablissement, enseigne2Etablissement, enseigne3Etablissement, activitePrincipaleUniteLegale, AbscisseEtablissement, OrdonneeEtablissement FROM personne_morale",
+  "get_siren_table_prediction_no_geo": "SELECT siren, siret, denominationUniteLegale, sigleUniteLegale, denominationUsuelle1UniteLegale, denominationUsuelle2UniteLegale, denominationUsuelle3UniteLegale, denominationUsuelleEtablissement, enseigne1Etablissement, enseigne2Etablissement, enseigne3Etablissement, activitePrincipaleUniteLegale FROM personne_morale",
+  "get_siren_table_api_no_geo": "SELECT siren, siret, denominationUniteLegale, denominationUsuelle1UniteLegale, activitePrincipaleUniteLegale FROM personne_morale",
+  "get_siren_table_api": "SELECT siren, siret, denominationUniteLegale, denominationUsuelle1UniteLegale, activitePrincipaleUniteLegale, AbscisseEtablissement, OrdonneeEtablissement FROM personne_morale",
+  "create_azure_secret": "CREATE SECRET secret_azure (TYPE AZURE, PROVIDER CREDENTIAL_CHAIN, ACCOUNT_NAME '{azure_storage_account}')",
+  "get_compauxlib_from_ediag": "SELECT DISTINCT(COMPAUXLIB) FROM ediag.Clients WHERE COMPAUXLIB != '' UNION SELECT DISTINCT(COMPAUXLIB) FROM ediag.Fournisseurs WHERE COMPAUXLIB != ''",
+  "create_compauxlib_siren_table": "CREATE TABLE IF NOT EXISTS ediag.compauxlib_siren ({list_of_variables})",
+  "create_compauxlib_siren_debug_table": "CREATE TABLE IF NOT EXISTS ediag.compauxlib_siren_debug ({list_of_variables})",
+  "update_compauxlib_siren_table": "CREATE OR REPLACE TABLE ediag.compauxlib_siren AS SELECT {list_of_variables} FROM df_to_propose",
+  "update_compauxlib_siren_debug_table": "CREATE OR REPLACE TABLE ediag.compauxlib_siren_debug AS SELECT {list_of_variables} FROM df_debug",
+  "get_ediag_table": "SELECT DISTINCT(table_name) FROM duckdb_tables() WHERE database_name = '{sqlite_db_alias}'",
+  "get_fec_from_ediag": "SELECT FEC FROM {sqlite_db_alias}.RAPPORT_EDIAG",
+  "get_lsh_index_table": "SELECT * FROM '{lsh_table_name}' WHERE lsh_index IN ({indexes}) AND lsh_index != -1"
+}
